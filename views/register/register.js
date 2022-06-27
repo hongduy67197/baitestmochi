@@ -4,13 +4,6 @@ $('#registerBtn').on('click', async function () {
         const username = $('#username').val()
         const password = $('#password').val()
         const confirmPassword = $('#confirm-password').val()
-        // console.log(email, username, password, confirmPassword);
-        // console.log(email, validate());
-        // console.log(username, validateUsername(username));
-        console.log(9, validateUsername(username));
-        console.log(10, validate());
-        console.log(11, validatePassPartern(password));
-        console.log(12, checkMatchPass(password, confirmPassword));
         if (checkMatchPass(password, confirmPassword) && validatePassPartern(password) && validate() && validateUsername(username)) {
             const res = await $.ajax({
                 url: '/user/register',
